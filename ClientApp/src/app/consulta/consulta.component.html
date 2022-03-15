@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+<h1>Consulta</h1>
 
-</body>
-</html>
+<p>This is a simple example of an Angular component.</p>
+
+
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+
+  <label>ID:</label>
+  <input type="number" name="id" value="1" min="1" ngModel placeholder="1" class="base_input" /> <br /> <br />
+</form>
+
+<br />
+<p>{{"1000" | currency: 'BRL'}}</p>

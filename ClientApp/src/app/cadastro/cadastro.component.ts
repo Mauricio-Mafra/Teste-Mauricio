@@ -1,4 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,4 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CadastroComponent {
 
+  onSubmit(data: any){
+    console.log(data);
+  }
 }
