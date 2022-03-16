@@ -27,13 +27,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\app.js" />
-    <None Remove="ClientApp\src\app\factory.js" />
-    <None Remove="ClientApp\src\app\NewFolder\htmlpage.html" />
+    <Compile Remove="Controllers\ValuesController.cs" />
+    <Compile Remove="Controllers\ValuesController1.cs" />
+    <Compile Remove="Controllers\ValuesController2.cs" />
+    <Compile Remove="Model\Class.cs" />
+    <Compile Remove="Model\ValoresController.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
+    <None Remove="ClientApp\src\app\app.js" />
+    <None Remove="ClientApp\src\app\factory.js" />
+    <None Remove="ClientApp\src\app\NewFolder\htmlpage.html" />
   </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

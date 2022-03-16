@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 
@@ -8,7 +8,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CadastroComponent {
 
-  onSubmit(data: any){
-    console.log(data);
+
+  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+  }
+
+onSubmit(data: any) {
+  //this.http.post(baseUrl, data, httpOptions);
   }
 }
